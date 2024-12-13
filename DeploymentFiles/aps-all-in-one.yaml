@@ -492,6 +492,7 @@ spec:
   type: LoadBalancer # Expose service externally via load balancer
 ---
 # Deployment for AI Service
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -521,9 +522,9 @@ spec:
             - name: AZURE_OPENAI_DEPLOYMENT_NAME # required if using Azure OpenAI
               value: "gpt-4"
             - name: AZURE_OPENAI_ENDPOINT # required if using Azure OpenAI
-              value: ""
+              value: "https://bestbuyainew.openai.azure.com/"
             - name: AZURE_OPENAI_DALLE_ENDPOINT
-              value: "https:"
+              value: "https://bestbuyainew.openai.azure.com/"
             - name: AZURE_OPENAI_DALLE_DEPLOYMENT_NAME
               value: "dall-e-3"
             - name: OPENAI_API_KEY # always required
